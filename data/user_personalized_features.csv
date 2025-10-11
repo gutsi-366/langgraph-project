@@ -1,0 +1,6 @@
+user_id,age,country,total_purchases,last_login_days,browsing_time_minutes
+1,25,USA,5,2,120
+2,32,UK,3,10,75
+3,41,China,8,1,200
+4,28,Germany,2,15,50
+5,36,India,6,5,180

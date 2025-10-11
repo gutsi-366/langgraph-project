@@ -1,0 +1,30 @@
+/* Containers */
+.hero {
+  padding: 24px 22px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,#0f172a 0%, #111827 100%);
+  border: 1px solid #1f2937;
+  margin-bottom: 16px;
+}
+.card {
+  border: 1px solid #232a36;
+  background: #0f141c;
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+.card h4 { margin: 0 0 6px 0; font-weight: 600; }
+.pill {
+  display:inline-block; padding:4px 10px; font-size:12px;
+  border:1px solid #334155; border-radius:999px; opacity:.9
+}
+.divider { height:1px; background: #243042; margin:16px 0; }
+
+/* Tables */
+.dataframe td, .dataframe th { border-color:#243042 !important; }
+
+/* Buttons */
+.stButton>button {
+  border-radius: 10px !important;
+  border: 1px solid #1f2937 !important;
+  background: linear-gradient(180deg,#1f2a37,#141a22) !important;
+}
