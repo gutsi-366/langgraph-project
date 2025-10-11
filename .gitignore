@@ -1,0 +1,6 @@
+.venv/
+outputs/
+__pycache__/
+.streamlit/secrets.toml
+data/*.csv
+!data/large_dataset.csv
