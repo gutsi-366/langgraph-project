@@ -1,61 +1,55 @@
-\[!\[Open in Streamlit](https://static.streamlit.io/badges/streamlit\_badge\_black\_white.svg)](https://langgraph-project-azegang.streamlit.app)
+<p align="center">
+  <img src="docs/banner.svg" alt="LangGraph AI E-commerce Analytics banner" width="100%">
+</p>
 
-
-
-\# LangGraph AI E-commerce Analytics
-
-
-
-Analyze your dataset, crawl competitors, and generate LLM-planned reports.
-
-
-
----
-
-
-
-\## ?? Features
-
-\- \*\*?? Analyze Dataset:\*\* Upload or sample data, view KPIs, charts, and insights.
-
-\- \*\*??? Crawl Competitors:\*\* Extract links, domains, and TLD analytics.
-
-\- \*\*?? LLM Plan Runner:\*\* Execute LangGraph pipeline for full AI-driven analysis.
-
-\- \*\*?? Runs:\*\* View saved analyses and crawls.
-
-
+<p align="center">
+  <a href="https://langgraph-project-azegang.streamlit.app">
+    <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Open in Streamlit">
+  </a>
+  <br/>
+  <a href="https://www.python.org/">
+    <img alt="Python" src="https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white">
+  </a>
+  <a href="https://streamlit.io/">
+    <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-app-FF4B4B?logo=streamlit&logoColor=white">
+  </a>
+  <a href="https://github.com/langchain-ai/langgraph">
+    <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-enabled-4B8BBE">
+  </a>
+  <a href="LICENSE">
+    <img alt="License" src="https://img.shields.io/badge/License-MIT-green.svg">
+  </a>
+</p>
 
 ---
 
+## ?? Overview
+**LangGraph AI E-commerce Analytics** is a Streamlit-powered project that analyzes data, crawls competitors, and generates AI-driven insights for e-commerce businesses.
 
-
-\## ?? Deployment
-
-\*\*Live App:\*\* \[https://langgraph-project-azegang.streamlit.app](https://langgraph-project-azegang.streamlit.app)
-
-
+- ?? Interactive analytics dashboard  
+- ??? Competitor crawling & data extraction  
+- ?? LangGraph-based AI agent for planning and insights  
+- ??? Save, export, and review results  
 
 ---
 
+## ?? Live Demo
+**Open the App:** [langgraph-project-azegang.streamlit.app](https://langgraph-project-azegang.streamlit.app)
 
+---
 
-\## ?? Local Setup
+## ?? Tech Stack
+- **Streamlit** — UI framework  
+- **LangGraph** — AI agent logic  
+- **BeautifulSoup + Requests** — web crawling  
+- **Pandas, NumPy, Matplotlib** — data analysis  
+- **scikit-learn** — ML-based insights  
 
+---
+
+## ?? Setup (Local)
 ```bash
-
 git clone https://github.com/gutsi-366/langgraph-project.git
-
 cd langgraph-project
-
-python -m venv .venv
-
-.\\\\.venv\\\\Scripts\\\\activate
-
 pip install -r requirements.txt
-
 streamlit run app.py
-
-
-
-
