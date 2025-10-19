@@ -149,21 +149,12 @@ results = agent.analyze_large_dataset(df)
 
 # ----- KPIs -----
 km = results.get("key_metrics", {})
-if _HAS_UI:
-    section("Key Metrics")
-    c1, c2, c3, c4 = st.columns(4)
-    with c1: metric_card("Total Revenue Potential", km.get("total_revenue_potential", "—"), icon="💰", color="blue")
-    with c2: metric_card("Avg Order Value", km.get("average_order_value", "—"), icon="🛒", color="green")
-    with c3: metric_card("Avg Browsing Time", km.get("average_browsing_time", "—"), icon="⏱️", color="purple")
-    with c4: metric_card("Active Users (≤7d)", km.get("active_users_ratio", "—"), icon="👥", color="orange")
-    divider()
-else:
-    st.subheader("Key Metrics")
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Total Revenue Potential", km.get("total_revenue_potential", "—"))
-    c2.metric("Avg Order Value", km.get("average_order_value", "—"))
-    c3.metric("Avg Browsing Time", km.get("average_browsing_time", "—"))
-    c4.metric("Active Users (≤7d)", km.get("active_users_ratio", "—"))
+st.subheader("Key Metrics")
+c1, c2, c3, c4 = st.columns(4)
+c1.metric("💰 Total Revenue Potential", km.get("total_revenue_potential", "—"))
+c2.metric("🛒 Avg Order Value", km.get("average_order_value", "—"))
+c3.metric("⏱️ Avg Browsing Time", km.get("average_browsing_time", "—"))
+c4.metric("👥 Active Users (≤7d)", km.get("active_users_ratio", "—"))
 
 # ----- segments -----
 segments = results.get("customer_segments", {})
