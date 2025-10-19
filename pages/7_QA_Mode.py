@@ -323,15 +323,15 @@ def main():
     # Quick stats section
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        metric_card("Total Records", f"{len(large_df):,}", icon="📊", color="blue")
+        st.metric("📊 Total Records", f"{len(large_df):,}")
     with col2:
-        metric_card("Columns", len(large_df.columns), icon="📋", color="green")
+        st.metric("📋 Columns", len(large_df.columns))
     with col3:
         numeric_cols = len(large_df.select_dtypes(include=[np.number]).columns)
-        metric_card("Numeric Columns", numeric_cols, icon="🔢", color="purple")
+        st.metric("🔢 Numeric Columns", numeric_cols)
     with col4:
         missing_count = large_df.isnull().sum().sum()
-        metric_card("Missing Values", f"{missing_count:,}", icon="⚠️", color="orange")
+        st.metric("⚠️ Missing Values", f"{missing_count:,}")
 
     # Show dataset type info
     if selected_dataset['type'] == 'current':
