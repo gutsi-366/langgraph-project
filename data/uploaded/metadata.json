@@ -1,0 +1,101 @@
+{
+  "1760811925_large_dataset.csv": {
+    "name": "large_dataset.csv",
+    "description": "Uploaded CSV file with 30 rows and 10 columns",
+    "source": "uploaded",
+    "rows": 30,
+    "columns": 10,
+    "column_names": [
+      "user_id",
+      "age",
+      "total_purchases",
+      "customer_lifetime_value",
+      "preferred_category",
+      "device_type",
+      "browsing_time_minutes",
+      "avg_order_value",
+      "customer_segment",
+      "signup_date"
+    ],
+    "data_types": {
+      "user_id": "int64",
+      "age": "int64",
+      "total_purchases": "int64",
+      "customer_lifetime_value": "float64",
+      "preferred_category": "object",
+      "device_type": "object",
+      "browsing_time_minutes": "int64",
+      "avg_order_value": "float64",
+      "customer_segment": "object",
+      "signup_date": "object"
+    },
+    "created_at": "2025-10-19T02:25:25.464793",
+    "file_path": "data\\uploaded\\1760811925_large_dataset.csv.pkl"
+  },
+  "1760812283_large_dataset.csv": {
+    "name": "large_dataset.csv",
+    "description": "Uploaded CSV file with 30 rows and 10 columns",
+    "source": "uploaded",
+    "rows": 30,
+    "columns": 10,
+    "column_names": [
+      "user_id",
+      "age",
+      "total_purchases",
+      "customer_lifetime_value",
+      "preferred_category",
+      "device_type",
+      "browsing_time_minutes",
+      "avg_order_value",
+      "customer_segment",
+      "signup_date"
+    ],
+    "data_types": {
+      "user_id": "int64",
+      "age": "int64",
+      "total_purchases": "int64",
+      "customer_lifetime_value": "float64",
+      "preferred_category": "object",
+      "device_type": "object",
+      "browsing_time_minutes": "int64",
+      "avg_order_value": "float64",
+      "customer_segment": "object",
+      "signup_date": "object"
+    },
+    "created_at": "2025-10-19T02:31:23.802725",
+    "file_path": "data\\uploaded\\1760812283_large_dataset.csv.pkl"
+  },
+  "1760812307_large_dataset.csv": {
+    "name": "large_dataset.csv",
+    "description": "Uploaded CSV file with 30 rows and 10 columns",
+    "source": "uploaded",
+    "rows": 30,
+    "columns": 10,
+    "column_names": [
+      "user_id",
+      "age",
+      "total_purchases",
+      "customer_lifetime_value",
+      "preferred_category",
+      "device_type",
+      "browsing_time_minutes",
+      "avg_order_value",
+      "customer_segment",
+      "signup_date"
+    ],
+    "data_types": {
+      "user_id": "int64",
+      "age": "int64",
+      "total_purchases": "int64",
+      "customer_lifetime_value": "float64",
+      "preferred_category": "object",
+      "device_type": "object",
+      "browsing_time_minutes": "int64",
+      "avg_order_value": "float64",
+      "customer_segment": "object",
+      "signup_date": "object"
+    },
+    "created_at": "2025-10-19T02:31:47.253586",
+    "file_path": "data\\uploaded\\1760812307_large_dataset.csv.pkl"
+  }
+}

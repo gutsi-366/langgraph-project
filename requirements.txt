@@ -14,13 +14,21 @@ numpy>=1.24.0
 python-dotenv>=1.0.0
 typing-extensions>=4.9.0
 
-# --- Web app & Visualization ---
+# Web app & Visualization
 streamlit>=1.37.0
 plotly>=5.18.0
 
-# --- Web crawler ---
+# Web crawler
 requests>=2.31.0
 beautifulsoup4>=4.12.2
 
-# --- Optional (for export / Markdown reports) ---
+# Optional (for export / Markdown reports)
 markdown>=3.5.2
+
+# Phase 2: Advanced Features
+flask>=2.3.0
+flask-cors>=4.0.0
+kaleido>=0.2.1
+
+# Production dependencies
+gunicorn>=21.2.0

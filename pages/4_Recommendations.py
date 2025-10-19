@@ -20,11 +20,33 @@ except Exception:
     _HAS_UI = False
 
 st.set_page_config(page_title="AI Recommendations", page_icon="💡", layout="wide")
-if _HAS_UI:
-    load_css()
-    hero("💡 AI Recommendations", "Personalized strategies based on the analyzed dataset.")
-else:
-    st.title("💡 AI Recommendations")
+
+# Create hero section with inline styles (no CSS variables)
+st.markdown("""
+<div style="
+    text-align: center; 
+    padding: 3rem 2rem; 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    border-radius: 15px; 
+    margin-bottom: 2rem; 
+    color: white;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+">
+    <div style="font-size: 4rem; margin-bottom: 1rem;">💡</div>
+    <h1 style="
+        margin: 0; 
+        font-size: 3rem; 
+        font-weight: 800;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    ">AI Recommendations</h1>
+    <p style="
+        margin: 1rem 0 0 0; 
+        font-size: 1.3rem; 
+        opacity: 0.9;
+        font-weight: 400;
+    ">Personalized strategies based on the analyzed dataset.</p>
+</div>
+""", unsafe_allow_html=True)
 
 # --- Select last analysis run ---
 runs = list_runs()
@@ -32,8 +54,14 @@ if not runs:
     st.warning("No previous analysis found. Run Analyze Dataset first.")
     st.stop()
 
-run_file = st.selectbox("Select analysis to load", runs)
-data = load_run(run_file)
+run_choice = st.selectbox("Select analysis to load", runs, format_func=lambda r: r.get("id", str(r)))
+run_id = run_choice.get("id") if isinstance(run_choice, dict) else str(run_choice)
+data = load_run(run_id)
+if not data and isinstance(run_choice, dict) and run_choice.get("path"):
+    try:
+        data = json.loads(Path(run_choice["path"]).read_text(encoding="utf-8"))
+    except Exception:
+        data = None
 if not data:
     st.error("Failed to load analysis file.")
     st.stop()
