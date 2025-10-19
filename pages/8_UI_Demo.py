@@ -86,16 +86,16 @@ def main():
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        metric_card("Total Users", "12,345", change=12.5, icon="👥", color="blue")
+        st.metric("👥 Total Users", "12,345", "12.5%")
     
     with col2:
-        metric_card("Revenue", "$1.2M", change=8.3, icon="💰", color="green")
+        st.metric("💰 Revenue", "$1.2M", "8.3%")
     
     with col3:
-        metric_card("Growth", "+24%", change=-2.1, icon="📈", color="purple")
+        st.metric("📈 Growth", "+24%", "-2.1%")
     
     with col4:
-        metric_card("Active", "98.5%", change=0.5, icon="⚡", color="orange")
+        st.metric("⚡ Active", "98.5%", "0.5%")
     
     divider()
     

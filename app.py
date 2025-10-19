@@ -222,49 +222,28 @@ def show_dashboard():
         col1, col2, col3, col4 = st.columns(4)
         
         with col1:
-            if _HAS_UI:
-                metric_card("Total Customers", f"{len(df):,}", icon="👥", color="blue")
-            else:
-                st.metric("Total Customers", f"{len(df):,}")
+            st.metric("👥 Total Customers", f"{len(df):,}")
         
         with col2:
             if 'total_purchases' in df.columns:
                 avg_purchases = df['total_purchases'].mean()
-                if _HAS_UI:
-                    metric_card("Avg Purchases", f"{avg_purchases:.1f}", icon="🛒", color="green")
-                else:
-                    st.metric("Avg Purchases", f"{avg_purchases:.1f}")
+                st.metric("🛒 Avg Purchases", f"{avg_purchases:.1f}")
             else:
-                if _HAS_UI:
-                    metric_card("Data Columns", f"{len(df.columns)}", icon="📊", color="purple")
-                else:
-                    st.metric("Data Columns", f"{len(df.columns)}")
+                st.metric("📊 Data Columns", f"{len(df.columns)}")
         
         with col3:
             if 'customer_lifetime_value' in df.columns:
                 avg_clv = df['customer_lifetime_value'].mean()
-                if _HAS_UI:
-                    metric_card("Avg CLV", f"${avg_clv:,.2f}", icon="💰", color="orange")
-                else:
-                    st.metric("Avg CLV", f"${avg_clv:,.2f}")
+                st.metric("💰 Avg CLV", f"${avg_clv:,.2f}")
             else:
-                if _HAS_UI:
-                    metric_card("Data Rows", f"{len(df):,}", icon="📈", color="blue")
-                else:
-                    st.metric("Data Rows", f"{len(df):,}")
+                st.metric("📈 Data Rows", f"{len(df):,}")
         
         with col4:
             if 'preferred_category' in df.columns:
                 top_category = df['preferred_category'].value_counts().index[0]
-                if _HAS_UI:
-                    metric_card("Top Category", top_category, icon="🏆", color="red")
-                else:
-                    st.metric("Top Category", top_category)
+                st.metric("🏆 Top Category", top_category)
             else:
-                if _HAS_UI:
-                    metric_card("Data Size", f"{df.memory_usage(deep=True).sum() / 1024**2:.1f} MB", icon="💾", color="purple")
-                else:
-                    st.metric("Data Size", f"{df.memory_usage(deep=True).sum() / 1024**2:.1f} MB")
+                st.metric("💾 Data Size", f"{df.memory_usage(deep=True).sum() / 1024**2:.1f} MB")
         
         # Quick analysis button
         if st.button("🚀 Run Quick Analysis", type="primary"):
